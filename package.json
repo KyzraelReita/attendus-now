@@ -1,1 +1,34 @@
-
+{
+  "package.json": {
+    "name": "attendus-now",
+    "version": "1.0.0",
+    "description": "Personal Life RPG Tracker - Gamify your personal development",
+    "main": "index.js",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "lucide-react": "^0.263.1"
+    },
+    "devDependencies": {
+      "@types/react": "^18.2.15",
+      "@types/react-dom": "^18.2.7",
+      "@vitejs/plugin-react": "^4.0.3",
+      "autoprefixer": "^10.4.14",
+      "postcss": "^8.4.27",
+      "tailwindcss": "^3.3.3",
+      "vite": "^4.4.5"
+    }
+  },
+  "vite.config.js": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\nexport default defineConfig({\n  plugins: [react()],\n  base: './',\n  build: {\n    outDir: 'dist',\n    assetsDir: 'assets'\n  }\n})",
+  "tailwind.config.js": "/** @type {import('tailwindcss').Config} */\nexport default {\n  content: [\n    \"./index.html\",\n    \"./src/**/*.{js,ts,jsx,tsx}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}",
+  "postcss.config.js": "export default {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  },\n}",
+  "index.html": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Attendus Now - Personal Life RPG Tracker</title>\n    <meta name=\"description\" content=\"Gamify your personal development with Attendus Now - track habits, build skills, and level up your life.\" />\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.jsx\"></script>\n  </body>\n</html>",
+  "src/main.jsx": "import React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App.jsx'\nimport './index.css'\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>,\n)",
+  "src/index.css": "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
+  "README.md": "# Attendus Now\n\nA personal development RPG tracker that gamifies your journey of growth.\n\n## Features\n\n- 6 Core Attributes: Resilience, Awareness, Discernment, Charisma, Reflexes, Presence\n- 120+ Skills across all attributes\n- Daily habit tracking with streaks\n- Goal management system\n- Motivational quote system\n- Character progression and leveling\n\n## Getting Started\n\n1. Install dependencies:\n```bash\nnpm install\n```\n\n2. Start development server:\n```bash\nnpm run dev\n```\n\n3. Build for production:\n```bash\nnpm run build\n```\n\n## Deployment\n\nThis app can be deployed to any static hosting service like:\n- Netlify\n- Vercel\n- GitHub Pages\n- Firebase Hosting\n\n## License\n\nMIT License - feel free to modify and distribute!"
+}
